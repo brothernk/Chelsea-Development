@@ -1,0 +1,56 @@
+/* Global Styling */
+body {
+    margin:0 auto;
+    padding:0px;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #fcf5ed;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+nav a {
+    padding:15px;
+    font:15px "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+h1 {
+    font:60px "Source Serif Pro", serif;
+    margin-bottom:10px;
+}
+
+h3, p {
+    padding:0;
+    margin:0;
+}
+
+p {
+    font-family: "Source Serif Pro", serif;
+}
+
+/* Homepage */
+.main-images {
+    display: flex;
+    max-width:100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-images div {
+    padding:8px;
+}
+
+h3 {
+    background-color: green;
+    color:white;
+    padding:5px;
+    font:20px "Source Sans Pro", sans-serif;
+}
+.amenities{
+    text-align: left;
+}
