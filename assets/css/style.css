@@ -166,9 +166,10 @@ i /* Side Arrows */{
 }
 
 .rental-app:hover {
-    background-color: #1b2118;
+    background-color: #364330;
     box-shadow: 2px 2px 5px #283224;
-    transition: .15s;
+    transition: .1s;
+    transform: scale(.99);
 }
 
 h4 /* Rental Application (PDF) */{
