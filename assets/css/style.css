@@ -42,15 +42,17 @@ h1 /*Chelsea Development*/{
     font:80px "Fjalla One", sans-serif;
     margin:0;
     text-align: left;
+    padding-left:10px;
 }
 
 /* Navbar */
 nav {
     display: flex;
+    text-align: left;
 }
 
 nav a {
-    padding:0 25px 0 0;
+    padding:12px 15px;
     font:14px "Open Sans", sans-serif;
     text-transform: uppercase;
     color:#516448;
@@ -61,6 +63,12 @@ nav a {
 a {
     text-decoration: none;
     color:#283224;
+}
+
+a:hover {
+    background-color:#364330;
+    color:white;
+    transition:.15s;
 }
 
 .right-side /*Slideshow of Apartments*/ {
@@ -88,6 +96,7 @@ h3 /* Name of Apartment Complex & Debbie's Name*/ {
     display:flex;
     justify-content: space-between;
     max-width:100vw;
+    background-color:#f5f8f4;
 }
 
 .housing-left-side, .housing-right-side{
@@ -113,8 +122,13 @@ h3 /* Name of Apartment Complex & Debbie's Name*/ {
     padding:20px 12px;
 }
 
+.housing-pg nav a:hover{
+    color: #f5f8f4;
+    transition: .15s;
+}
+
 h2 /*Apartment Name*/{
-    font:40px "Fjalla One", sans-serif;
+    font:45px "Fjalla One", sans-serif;
     margin-top:10px;
     color:#1b2118;
 }
@@ -129,7 +143,7 @@ h2 /*Apartment Name*/{
 
 .housing-right-side /* Images & Contact Info */{
     justify-content: center;
-    background-color:#fefefe;
+    background-color:#f5f8f4;
 }
 
 .address /* Found at top of Image */{
@@ -149,6 +163,11 @@ i /* Side Arrows */{
     font-size:50px;
     padding: 0 25px;
     cursor: pointer;
+}
+
+i:hover {
+    color:#516448;
+    transition: .15s;
 }
 
 .contact p /* Contact Info */{
