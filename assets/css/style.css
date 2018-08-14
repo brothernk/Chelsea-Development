@@ -1,62 +1,225 @@
-/* Global Styling */
+/* Global Styling ======================================================*/
 body {
     margin:0 auto;
     padding:0px;
-    text-align: center;
-    background-color: #fcf5ed;
-    
+    background-color: #fefefe;
 }
 
 a {
     text-decoration: none;
-    color:black;
+    color:#283224;
 }
 
-nav a {
-    padding:15px;
-    font: 14px "Open Sans", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .5px;
+/* Homepage ============================================================*/
+.homepage {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width:100vw;
+    background-color: #fefefe;
+}
+
+.left-side {
+    border-left:5px solid #87A878;
+    color:#87A878;
+    height:300px;
+    padding:0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:35vw;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #87A878;
+    height:100vh;
+    width:55vw;
 }
 
 nav {
-    padding-bottom: 20px;
+    display: flex;
+}
+
+nav a {
+    padding:0 25px 0 0;
+    font:14px "Open Sans", sans-serif;
+    text-transform: uppercase;
+    color:#516448;
+    font-weight: bold;
+    letter-spacing: .5px;
 }
 
 h1 {
-    font:65px "Oswald", serif;
-    margin:10px;
-}
-
-h3, p {
-    padding:0;
+    font:80px "Fjalla One", sans-serif;
+    max-width: 300px;
     margin:0;
 }
 
-/* Homepage */
-.main-images {
-    display: flex;
-    max-width:100vw;
-    flex-wrap: wrap;
-    justify-content: center;
+h3 {
+    margin:0 auto;
+    padding:20px 5px 5px 5px;
+    font:30px "Fjalla One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.main-images div {
-    padding:8px;
+p, li{
+    margin:0 auto;
+    font:15px "Open Sans", sans-serif;
+    color:#fefefe;
 }
 
 img {
-    box-shadow: 5px 5px 10px grey;
+    box-shadow: 5px 5px 10px #364330;
+    width:400px;
 }
 
-h3 {
-    background-color: #82AC9F;
-    color:white;
-    margin-top:10px;
-    padding:10px;
-    font:20px "Open Sans", sans-serif;
-    border:2px solid #759a8f;
+/* Individual Pages ============================================================*/
+.housing-pg {
+    display:flex;
+    width:100vw;
+    justify-content: space-between;
+    text-align: center;
 }
-.amenities{
-    text-align: left;
+
+.housing-pg nav a {
+    color: #283224;
+    padding:20px 12px;
+}
+
+.housing-pg p, .mobile-amenities li{
+    color:#0d100c;
+}
+
+h2 {
+    font:45px "Fjalla One", sans-serif;
+    margin-top:10px;
+    color:#0d100c !important;
+}
+
+.housing-left-side, .housing-right-side{
+    padding:0 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+
+.housing-left-side{
+    justify-content: space-between;
+    background-color:#87A878;
+}
+
+.housing-right-side {
+    background-color:#fefefe;
+}
+
+.amenity-title {
+    font:20px "Fjalla One", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color:#283224 !important;
+    text-align: center;
+}
+
+.address {
+    font:20px "Fjalla One", sans-serif;
+    background-color: #87A878;
+    width:400px;
+    padding:12px 0;
+    margin-bottom: 5px;
+}
+
+.housing-img{
+    display: flex;
+    align-items: center;
+}
+
+i {
+    font-size:50px;
+    padding: 0 25px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+/* Rental Application ==========================================================*/
+.rental-app {
+    background-color:#516448;
+    padding:20px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #283224;
+}
+
+.rental-app p {
+    font-size:11px;
+    color:#cfdcc9;
+}
+
+h4 {
+    font:15px "Open Sans", sans-serif;
+    text-transform: uppercase;
+    padding-bottom:8px;
+    font-weight: bold;
+    margin:0;
+    color:white;
+}
+
+/* Mobile Responsive ==========================================================*/
+@media only screen and (max-width: 1150px) {
+    h1{
+        font-size:6vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h1{
+        max-width: 100%;
+        font-size:50px;
+    }
+    .homepage{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .left-side{
+        height:100%;
+        padding-bottom: 20px;
+        width:100vw;
+        align-items: center;
+        border:none;
+    }
+    .right-side{
+        height:100% !important;
+        width:100vw;
+        padding:50px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .housing-pg {
+        flex-direction: column;
+        background-color: #cfdcc9;
+        justify-content: flex-start;
+    }
+    .housing-left-side,.housing-right-side{
+        height: 100%;
+        background-color: #cfdcc9;
+    }
+    .amenities li {
+        color:#0d100c;
+    }
+    .rental-app{
+        transform: scale(.9);
+        margin: 10px 0;
+        width:400px;
+    }
 }
