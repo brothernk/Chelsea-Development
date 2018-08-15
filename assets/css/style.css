@@ -113,6 +113,7 @@ h3 /* Name of Apartment Complex & Debbie's Name*/ {
     background-color:#87A878;
     max-height: 100vh;
     overflow: scroll;
+    border-right:5px solid #cfdcc9;
 }
 
 .top /* Navbar and Title ONLY */{
@@ -135,7 +136,7 @@ h3 /* Name of Apartment Complex & Debbie's Name*/ {
 }
 
 h2 /*Apartment Name*/{
-    font:35px "Fjalla One", sans-serif;
+    font:30px "Fjalla One", sans-serif;
     margin:0;
     padding:10px 0;
     color:#1b2118;
@@ -170,7 +171,7 @@ hr /*Decorative Line under Headers */{
 }
 
 .amenities p {
-    padding:5px 0;
+    padding:2px 0;
 }
 
 .housing-right-side /* Images & Contact Info */{
@@ -199,12 +200,13 @@ hr /*Decorative Line under Headers */{
 
 i /* Side Arrows */{
     font-size:50px;
-    padding: 0 25px;
+    margin:20px;
     cursor: pointer;
+    color:#283224;
 }
 
 i:hover {
-    color:#516448;
+    color:#87A878;
     transition: .15s;
 }
 
@@ -233,19 +235,25 @@ i:hover {
  margin-right: -50%;
 }
 
+.contact {
+    margin:30px 0;
+}
+
 .contact p /* Contact Info */{
     color:#1b2118;
-    padding:1px;
+    padding:2px;
 }
 
 /* Rental Application ==========================================================*/
 .rental-app {
     background-color:#516448;
     padding:20px;
-    margin: 40px 0 30px 0;
+    /* margin: 40px 0 30px 0; */
+    margin:20px;
     box-shadow: 3px 3px 5px #283224;
     border-radius: 5px;
     cursor: pointer;
+    width:460px;
 }
 
 .rental-app:hover {
@@ -259,7 +267,7 @@ h4 /* Rental Application (PDF) */{
     font:17px "Fjalla One", sans-serif;
     padding-bottom:8px;
     margin:0;
-    color:#cfdcc9;
+    color:#fefefe;
     letter-spacing: .8px;
 }
 
@@ -346,3 +354,26 @@ h4 /* Rental Application (PDF) */{
         padding-bottom: 30px;
     }
 }
+
+/* Testing Slideshow */
+.img {
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
