@@ -4,7 +4,6 @@ $( document ).ready(function() {
     var slideIndex = 1;
     showSlides(slideIndex);
 
-    // Next/previous controls
     function plusSlides(n) {
     showSlides(slideIndex += n);
     }
@@ -24,4 +23,12 @@ $( document ).ready(function() {
     }
     slides[slideIndex-1].style.display = "block"; 
     }
+
+    $(".fa-angle-left").click(function(){
+        plusSlides(-1);
+    });
+
+    $(".fa-angle-right").click(function(){
+        plusSlides(-1);
+    });
 });

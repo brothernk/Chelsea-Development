@@ -12,7 +12,7 @@ p, li /* Homepage Adress & List of Amenities */{
 
 }
 
-img {
+img, iframe{
     box-shadow: 5px 5px 11px #364330;
     width:400px;
 }
@@ -189,7 +189,7 @@ hr /*Decorative Line under Headers */{
     box-shadow: 0 10px 10px -8px #364330;
 }
 
-.housing-pg img {
+.housing-pg img, iframe {
     width:500px;
 }
 
@@ -199,15 +199,16 @@ hr /*Decorative Line under Headers */{
 }
 
 i /* Side Arrows */{
-    font-size:50px;
+    font-size:55px;
     margin:20px;
     cursor: pointer;
     color:#283224;
 }
 
 i:hover {
-    color:#87A878;
+    color:#516448;
     transition: .15s;
+    transform: scale(1.1);
 }
 
 .name /* Debbie's Name */{
@@ -249,7 +250,7 @@ i:hover {
     background-color:#516448;
     padding:20px;
     /* margin: 40px 0 30px 0; */
-    margin:20px;
+    margin:10px;
     box-shadow: 3px 3px 5px #283224;
     border-radius: 5px;
     cursor: pointer;
@@ -355,22 +356,14 @@ h4 /* Rental Application (PDF) */{
     }
 }
 
-/* Testing Slideshow */
+/* Slideshow Animation ======================================== */
 .img {
     display: none;
 }
 
-/* Fading animation */
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+    animation-duration: .5s;
   }
   
   @keyframes fade {
