@@ -9,6 +9,8 @@ p, li /* Homepage Adress & List of Amenities */{
     margin:0 auto;
     font:15px "Open Sans", sans-serif;
     color:#fefefe;
+    list-style: none;
+
 }
 
 img {
