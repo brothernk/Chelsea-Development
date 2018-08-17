@@ -23,7 +23,7 @@ img, iframe{
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 100vh;
+    min-height:100vh;
     width:100vw;
     background-color: #fefefe;
 }
@@ -49,11 +49,10 @@ h1 /*Chelsea Development*/{
 /* Navbar */
 nav {
     display: flex;
-    text-align: left;
 }
 
 nav a {
-    padding:12px 15px;
+    padding:5px;
     font:14px "Open Sans", sans-serif;
     text-transform: uppercase;
     color:#516448;
@@ -61,15 +60,19 @@ nav a {
     letter-spacing: .5px;
 }
 
+.homepage nav a {
+    margin-right:15px;
+}
+
 a {
     text-decoration: none;
     color:#283224;
+    border-radius: 2px;
 }
 
-a:hover {
-    background-color:#364330;
-    color:white;
+nav a:hover {
     transition:.15s;
+    background-color: #cfdcc9;
 }
 
 .right-side /*Slideshow of Apartments*/ {
@@ -128,11 +131,13 @@ h3 /* Name of Apartment Complex & Debbie's Name*/ {
 .housing-pg nav a {
     color: #283224;
     padding:15px;
+    border-radius: 0;
 }
 
 .housing-pg nav a:hover{
     color: #f5f8f4;
     transition: .15s;
+    background-color:#364330;
 }
 
 h2 /*Apartment Name*/{
@@ -183,14 +188,16 @@ hr /*Decorative Line under Headers */{
 .address /* Found at top of Image */{
     font:20px "Fjalla One", sans-serif;
     background-color: #87A878;
-    width:500px;
+    width:45vmax;
     padding:14px 0;
     margin-bottom: 5px;
     box-shadow: 0 10px 10px -8px #364330;
+    border-radius: 2px;
 }
 
 .housing-pg img, iframe {
-    width:500px;
+    width:45vw;
+    max-height:65vh;
 }
 
 .housing-img /* Div containing Image and Side Arrows */{
@@ -250,11 +257,11 @@ i:hover {
     background-color:#516448;
     padding:20px;
     /* margin: 40px 0 30px 0; */
-    margin:10px;
+    margin:10px 0;
     box-shadow: 3px 3px 5px #283224;
     border-radius: 5px;
     cursor: pointer;
-    width:460px;
+    width:42vmax;
 }
 
 .rental-app:hover {
@@ -277,7 +284,34 @@ h4 /* Rental Application (PDF) */{
     color:#cfdcc9 ;
 }
 
-/* Mobile Responsive ==========================================================*/
+/* Slideshow Animation ======================================== */
+
+.img {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: .5s;
+  }
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Sticky Header ================================================ */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#test-header {
+    overflow: hidden;
+}
+
+/* Screen Responsive ==========================================================*/
 @media only screen and (max-width: 1150px) {
     h1{
         font-size:6vw;
@@ -291,26 +325,30 @@ h4 /* Rental Application (PDF) */{
 @media only screen and (max-width: 1050px) {
     .homepage{
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 
     .left-side{
-        height:100%;
         width:100vw;
+        height:100%;
         align-items: center;
-        border-bottom:5px solid #364330;
+        border-bottom:4px solid #cfdcc9;
     }
 
     h1{
         max-width: 100%;
         font-size:50px;
-        padding:15px 0;
+        padding:10px;
+    }
+
+    nav {
+        padding-bottom: 15px;
     }
 
     .right-side{
         height:100%;
         width:100vw;
-       padding:30px; 
+        padding:30px;
     }
 
     /* Individual Apts ==========================================================*/
@@ -347,26 +385,28 @@ h4 /* Rental Application (PDF) */{
     }
 
     .address {
-        background-color:#f5f8f4;
-        color:#516448;
+        background-color:#516448;
     }
 
     .contact {
-        padding-bottom: 30px;
+        padding-bottom: 10px;
+    }
+    
+    .rental-app {
+        margin-bottom: 40px;
+        width:41vmax;
     }
 }
 
-/* Slideshow Animation ======================================== */
-.img {
-    display: none;
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size:40px;
+    }
+    html {
+        max-width: 100vw !important;
+    }
+    .housing-left-side{
+        border:none;
+        max-width: 100vw;;
+    }
 }
-
-.fade {
-    animation-name: fade;
-    animation-duration: .5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
