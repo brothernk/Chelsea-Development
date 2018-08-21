@@ -85,7 +85,7 @@ nav a:hover {
     width:55vw;
 }
 
-h3 /* Name of Apartment Complex & Debbie's Name*/ {
+h3 /* Name of Apartment on Homepage*/ {
     font:30px "Fjalla One", sans-serif;
     margin:0 auto;
     padding:20px 5px 5px 5px;
@@ -111,7 +111,7 @@ h3 /* Name of Apartment Complex & Debbie's Name*/ {
     height:100vh;
 }
 
-.housing-left-side /* Navbar, Title, Amenities, App Form */{
+.housing-left-side /* Navbar, Title, Amenities, Contact */{
     justify-content: space-between;
     background-color:#87A878;
     max-height: 100vh;
@@ -158,11 +158,11 @@ hr /*Decorative Line under Headers */{
     width: 100px;
 }
 
-.building-details {
+.building-details /* Div containing Amenities, Building Info, & Utilities */ {
     padding:0 50px;
 }
 
-.amenity-title {
+.amenity-title /* Header for all Building Details Sub Categories */ {
     font:20px "Fjalla One", sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
@@ -171,51 +171,12 @@ hr /*Decorative Line under Headers */{
     margin-top:40px;
 }
 
-#amenities-specific {
+#amenities-specific /* Specifically "Amenities" */ {
     margin-top:20px;
 }
 
-.amenities p {
+.amenities p /* Info listed under each header */{
     padding:2px 0;
-}
-
-.housing-right-side /* Images & Contact Info */{
-    justify-content: center;
-    background-color:#e7ede4;
-    width:100%;
-}
-
-.address /* Found at top of Image */{
-    font:20px "Fjalla One", sans-serif;
-    background-color: #87A878;
-    width:45vmax;
-    padding:14px 0;
-    margin-bottom: 5px;
-    box-shadow: 0 10px 10px -8px #364330;
-    border-radius: 2px;
-}
-
-.housing-pg img, iframe {
-    width:45vw;
-    max-height:65vh;
-}
-
-.housing-img /* Div containing Image and Side Arrows */{
-    display: flex;
-    align-items: center;
-}
-
-i /* Side Arrows */{
-    font-size:55px;
-    margin:20px;
-    cursor: pointer;
-    color:#283224;
-}
-
-i:hover {
-    color:#516448;
-    transition: .15s;
-    transform: scale(1.1);
 }
 
 .name /* Debbie's Name */{
@@ -252,11 +213,51 @@ i:hover {
     padding:2px;
 }
 
+/* ==================================================================*/
+.housing-right-side /* Address, Image, Rental App */{
+    justify-content: center;
+    background-color:#e7ede4;
+    width:100%;
+}
+
+.address /* Found at top of Image */{
+    font:20px "Fjalla One", sans-serif;
+    background-color: #87A878;
+    width:45vmax;
+    padding:14px 0;
+    margin-bottom: 5px;
+    box-shadow: 0 10px 10px -8px #364330;
+    border-radius: 2px;
+}
+
+.housing-img /* Div containing Image and Side Arrows */{
+    display: flex;
+    align-items: center;
+}
+
+.housing-pg img, iframe {
+    width:45vw;
+    max-height:65vh;
+}
+
+i /* Side Arrows */{
+    font-size:55px;
+    margin:20px;
+    cursor: pointer;
+    color:#283224;
+}
+
+i:hover {
+    color:#516448;
+    transition: .15s;
+    transform: scale(1.1);
+}
+
+
 /* Rental Application ==========================================================*/
 .rental-app {
     background-color:#516448;
     padding:20px;
-    /* margin: 40px 0 30px 0; */
     margin:10px 0;
     box-shadow: 3px 3px 5px #283224;
     border-radius: 5px;
@@ -284,8 +285,7 @@ h4 /* Rental Application (PDF) */{
     color:#cfdcc9 ;
 }
 
-/* Slideshow Animation ======================================== */
-
+/* Slideshow Animation ============================================ */
 .img {
     display: none;
 }
@@ -301,7 +301,7 @@ h4 /* Rental Application (PDF) */{
 }
 
 /* Sticky Header ================================================ */
-.sticky {
+/* .sticky {
     position: fixed;
     top: 0;
     width: 100%;
@@ -309,7 +309,7 @@ h4 /* Rental Application (PDF) */{
 
 #test-header {
     overflow: hidden;
-}
+} */
 
 /* Screen Responsive ==========================================================*/
 @media only screen and (max-width: 1150px) {
@@ -323,35 +323,44 @@ h4 /* Rental Application (PDF) */{
 }
 
 @media only screen and (max-width: 1050px) {
-    .homepage{
-        flex-direction: column;
-        justify-content: flex-start;
+    .homepage {
+        background-color:#87A878;
+        align-content: flex-start;
     }
 
     .left-side{
         width:100vw;
+        border-left:none;
         height:100%;
-        align-items: center;
         border-bottom:4px solid #cfdcc9;
+        background-color:#fefefe;
     }
 
     h1{
-        max-width: 100%;
         font-size:50px;
-        padding:10px;
+        padding:15px 0 10px 0;
+        text-align: center;
     }
 
     nav {
-        padding-bottom: 15px;
+        padding: 10px 0;
+        margin: 0 auto;
+    }
+
+    .homepage nav a {
+        margin-right:0px;
+        padding:10px;
+        margin:0 5px;
     }
 
     .right-side{
         height:100%;
-        width:100vw;
-        padding:30px;
+        max-width:100vw;
+        width:100%;
+        padding:30px 0;
     }
 
-    /* Individual Apts ==========================================================*/
+    /* Individual Apts */
     .housing-pg {
         flex-direction: column;
         align-items: center;
@@ -364,10 +373,15 @@ h4 /* Rental Application (PDF) */{
         margin:0;
     }
 
-    .top nav {
-        width:100vw;
+    .housing-pg nav a{
+        border-radius: 5px;
     }
 
+    .housing-pg nav a:hover{
+        color:#1b2118;
+        background-color:#cfdcc9;
+    }
+    
     span {
         color:#87A878 !important;
     }
@@ -376,37 +390,85 @@ h4 /* Rental Application (PDF) */{
         height: 100%;
         max-width:100vw;
         width:100vw;
-        background-color: #87A878;
         max-height: 100%;
+        border: none;
     }
 
-    .amenities li {
-        color:#0d100c;
+    .building-details {
+        max-width: 60vw;
+    }
+
+    .housing-right-side {
+        border-top:5px solid #516448;
+        padding:40px 0;
     }
 
     .address {
-        background-color:#516448;
+        max-width: 45vw;
     }
 
-    .contact {
-        padding-bottom: 10px;
+    iframe {
+        max-height: 300px;
     }
-    
+
     .rental-app {
-        margin-bottom: 40px;
-        width:41vmax;
+        width:41vw;
     }
 }
 
+/* Mobile Responsive ===============================================*/
 @media only screen and (max-width: 600px) {
+    .left-side{
+        padding:0;
+    }
     h1{
         font-size:40px;
+        width:100vw;
     }
-    html {
-        max-width: 100vw !important;
+
+    nav {
+        max-width: 100vw;
+        margin:0 auto;
+        justify-content: center;
     }
-    .housing-left-side{
-        border:none;
-        max-width: 100vw;;
+
+    .homepage nav a{
+        padding:6px;
     }
+
+    .address {
+        max-width: 100vw;
+        width:80vw;
+    }
+
+    img, iframe{
+        width: 80vw !important;
+        margin:0 auto;
+        max-height: 250px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .address {
+        font-size: 15px;
+    }
+
+    .rental-app {
+        margin-bottom:30px;
+        padding:20px 10px;
+        width:75vw;
+    }
+    
+    i {
+        position: absolute; 
+        font-size: 35px;
+    }
+    .fa-angle-left {
+       left:-15px;
+    }
+    .fa-angle-right {
+        right:-15px;
+     }
 }
