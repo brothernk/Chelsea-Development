@@ -162,6 +162,11 @@ hr /*Decorative Line under Headers */{
     padding:0 50px;
 }
 
+.vacancy{
+    font-weight: bolder;
+   color: #333;
+}
+
 .amenity-title /* Header for all Building Details Sub Categories */ {
     font:20px "Fjalla One", sans-serif;
     font-weight: bold;
