@@ -17,6 +17,14 @@ img, iframe{
     width:400px;
 }
 
+#equal-logo {
+    box-shadow: none;
+    max-width: 35px;
+    position: absolute;
+    top:15px;
+    right:15px;
+}
+
 /* Homepage ============================================================*/
 .homepage {
     display: flex;
@@ -163,8 +171,8 @@ hr /*Decorative Line under Headers */{
 }
 
 .vacancy{
-    font-weight: bolder;
-   color: #333;
+    font:16px "Fjalla One";
+    color: #1b2118;
 }
 
 .amenity-title /* Header for all Building Details Sub Categories */ {
@@ -305,17 +313,6 @@ h4 /* Rental Application (PDF) */{
     to {opacity: 1}
 }
 
-/* Sticky Header ================================================ */
-/* .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-#test-header {
-    overflow: hidden;
-} */
-
 /* Screen Responsive ==========================================================*/
 @media only screen and (max-width: 1150px) {
     h1{
@@ -449,7 +446,7 @@ h4 /* Rental Application (PDF) */{
     img, iframe{
         width: 80vw !important;
         margin:0 auto;
-        max-height: 250px;
+        max-height: 300px;
     }
 
     h3 {
@@ -475,5 +472,10 @@ h4 /* Rental Application (PDF) */{
     }
     .fa-angle-right {
         right:-15px;
-     }
+    }
+    #equal-logo {
+        position: fixed;
+        max-width: 30px;
+        top:93vh;
+    }
 }
