@@ -381,13 +381,11 @@ h4 /* Rental Application (PDF) */{
 
     .housing-pg nav a{
         border-radius: 5px;
-        border:2px solid transparent;
     }
 
     .housing-pg nav a:hover{
         color:#1b2118;
         background-color:#cfdcc9;
-        border:2px solid #87A878;
     }
     
     .current-link {
